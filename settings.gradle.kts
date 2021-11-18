@@ -9,5 +9,5 @@ dependencyResolutionManagement {
 rootProject.name = "Futurama"
 include (":app")
 include(":data")
-include(":domain")
 include(":presentation")
+include(":domain")

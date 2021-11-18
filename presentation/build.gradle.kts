@@ -1,6 +1,9 @@
 plugins {
-    id ("com.android.library")
-    id ("kotlin-android")
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -34,9 +37,21 @@ android {
 
 dependencies {
 
+    implementation(project(":domain"))
+
     implementation(AndroidxSupportDependencies.appCoreKtx)
     implementation(AndroidxSupportDependencies.appCompat)
     implementation(AndroidxSupportDependencies.materialDesign)
     implementation(AndroidxSupportDependencies.constraintLayout)
     implementation(AndroidxSupportDependencies.recyclerView)
+
+    // hilt
+    implementation(HiltDependencies.hiltCore)
+    kapt(HiltDependencies.hiltCompiler)
+    kapt(HiltDependencies.androidXHiltCompiler)
+
+    // architecture
+    implementation(ArchitectureComponentDependencies.viewModelKtx)
+    implementation(ArchitectureComponentDependencies.activityKtx)
+    implementation(ArchitectureComponentDependencies.fragmentKtx)
 }

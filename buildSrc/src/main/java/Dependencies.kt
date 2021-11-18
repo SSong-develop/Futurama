@@ -41,6 +41,10 @@ object Versions {
     const val versionEspressoCore = "3.1.1"
     const val versionJUnit = "4.13.1"
     const val versionAndroidxTestJUnit = "1.1.2"
+
+    // Hilt
+    const val versionHilt = "1.0.0"
+    const val versionHiltCore = "2.38.1"
 }
 
 object AndroidxSupportDependencies {
@@ -81,4 +85,10 @@ object TestDependencies {
     const val androidXJUnit = "androidx.test.ext:junit:${Versions.versionAndroidxTestJUnit}"
     const val Junit = "junit:junit:${Versions.versionJUnit}"
     const val androidxEspresso = "androidx.test.espresso:espresso-core:${Versions.versionEspressoCore}"
+}
+
+object HiltDependencies {
+    const val hiltCore = "com.google.dagger:hilt-android:${Versions.versionHiltCore}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.versionHiltCore}"
+    const val androidXHiltCompiler = "androidx.hilt:hilt-compiler:${Versions.versionHilt}"
 }

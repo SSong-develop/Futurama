@@ -3,7 +3,9 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    id("dagger.hilt.android.plugin")
 }
+
 
 android {
     compileSdk = BuildConfigVersions.compileSdk
@@ -43,6 +45,11 @@ android {
 }
 
 dependencies {
+
+    implementation(project(":data"))
+    implementation(project(":presentation"))
+    implementation(project(":domain"))
+
     implementation(AndroidxSupportDependencies.appCoreKtx)
     implementation(AndroidxSupportDependencies.appCompat)
     implementation(AndroidxSupportDependencies.materialDesign)
@@ -60,11 +67,16 @@ dependencies {
     implementation(NetworkDependencies.okHttp)
     implementation(NetworkDependencies.okHttpInterceptor)
     implementation(NetworkDependencies.okHttpLoggingInterceptor)
+    implementation(NetworkDependencies.gsonConverter)
 
     implementation(KotlinDependencies.coroutine)
 
     implementation(GlideDependencies.glide)
     implementation(GlideDependencies.glidePalette)
+
+    implementation(HiltDependencies.hiltCore)
+    kapt(HiltDependencies.hiltCompiler)
+    kapt(HiltDependencies.androidXHiltCompiler)
 }
 
 dependencies {
