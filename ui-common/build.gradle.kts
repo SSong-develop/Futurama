@@ -1,8 +1,6 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -16,6 +14,10 @@ android {
     }
 
     buildTypes {
+        getByName("debug") {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
@@ -36,20 +38,10 @@ android {
 
 dependencies {
 
-    implementation(project(":domain"))
+    // recyclerView
+    implementation(AndroidxSupportDependencies.recyclerView)
 
-    // network
-    implementation(NetworkDependencies.retrofit)
-    implementation(NetworkDependencies.okHttp)
-    implementation(NetworkDependencies.okHttpInterceptor)
-    implementation(NetworkDependencies.okHttpLoggingInterceptor)
-    implementation(NetworkDependencies.gsonConverter)
-
-    // coroutine
-    implementation(KotlinDependencies.coroutine)
-
-    // hilt
-    implementation(HiltDependencies.hiltCore)
-    kapt(HiltDependencies.hiltCompiler)
-    kapt(HiltDependencies.androidXHiltCompiler)
+    // glide
+    implementation(GlideDependencies.glide)
+    implementation(GlideDependencies.glidePalette)
 }

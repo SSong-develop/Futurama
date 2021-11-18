@@ -33,11 +33,16 @@ android {
     kotlinOptions {
         jvmTarget = BuildConfigVersions.versionJvm
     }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation(project(":domain"))
+    implementation(project(":ui-common"))
 
     implementation(AndroidxSupportDependencies.appCoreKtx)
     implementation(AndroidxSupportDependencies.appCompat)
