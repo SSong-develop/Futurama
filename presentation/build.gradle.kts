@@ -42,7 +42,6 @@ android {
 dependencies {
 
     implementation(project(":domain"))
-    implementation(project(":ui-common"))
 
     implementation(AndroidxSupportDependencies.appCoreKtx)
     implementation(AndroidxSupportDependencies.appCompat)
@@ -54,6 +53,10 @@ dependencies {
     implementation(HiltDependencies.hiltCore)
     kapt(HiltDependencies.hiltCompiler)
     kapt(HiltDependencies.androidXHiltCompiler)
+
+    // Glide
+    implementation(GlideDependencies.glide)
+    implementation(GlideDependencies.glidePalette)
 
     // architecture
     implementation(ArchitectureComponentDependencies.viewModelKtx)

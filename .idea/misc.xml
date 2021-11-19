@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/thdgn/AndroidStudioProjects/SSong-developProject/Futurama/app/src/main/res/drawable/ic_launcher_background.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/thdgn/AndroidStudioProjects/SSong-developProject/Futurama/presentation/src/main/res/layout/activity_main.xml" value="0.32407407407407407" />
+        <entry key="..\:/Users/thdgn/AndroidStudioProjects/SSong-developProject/Futurama/presentation/src/main/res/layout/item_character.xml" value="0.33" />
+        <entry key="..\:/Users/thdgn/AndroidStudioProjects/SSong-developProject/Futurama/ui-common/src/main/res/layout/item_character.xml" value="0.25" />
       </map>
     </option>
   </component>
