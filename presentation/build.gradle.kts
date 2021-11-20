@@ -62,4 +62,5 @@ dependencies {
     implementation(ArchitectureComponentDependencies.viewModelKtx)
     implementation(ArchitectureComponentDependencies.activityKtx)
     implementation(ArchitectureComponentDependencies.fragmentKtx)
+    implementation(ArchitectureComponentDependencies.lifecycleKtx)
 }

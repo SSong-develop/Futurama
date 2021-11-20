@@ -20,7 +20,7 @@ object Versions {
     const val versionRecyclerview = "1.2.1"
 
     // ArchitectureComponent
-    const val versionLifecycle = "2.3.1"
+    const val versionLifecycle = "2.4.0"
     const val versionFragmentKtx = "1.3.6"
     const val versionActivityKtx = "1.3.0"
     const val versionRoom = "2.3.0"
@@ -62,6 +62,7 @@ object ArchitectureComponentDependencies {
     const val roomRuntime = "androidx.room:room-runtime:${Versions.versionRoom}"
     const val roomKtx = "androidx.room:room-ktx:${Versions.versionRoom}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.versionRoom}"
+    const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.versionLifecycle}"
 }
 
 object NetworkDependencies {
