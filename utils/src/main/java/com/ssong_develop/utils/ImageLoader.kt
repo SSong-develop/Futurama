@@ -15,8 +15,15 @@ import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
+/**
+ * https://github.com/mmobin789/pixel
+ *
+ * 위의 플젝 참고하면서 기능 개선을 하면 좋을 것으로 판단
+ */
+
 // TODO : 구조 분석 및 캐시 과정 설명할 수 있도록 이해하기!
 // FIXME : 이미지 픽셀이 조금 뭉개지는 현상이 있는거 같음 개선해야한다!!
+// 깨져서 나오는 경우가 존재하므로 이를 개선해야한다.
 class ImageLoader(context : Context) {
 
     companion object {
