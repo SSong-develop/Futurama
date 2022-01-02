@@ -55,13 +55,34 @@ interface BitmapPool {
      */
     fun get(@Px width: Int, @Px height: Int, config: Bitmap.Config): Bitmap
 
+    /**
+     * Identical to [get] except that null will be returned if the pool does not contain a usable bitmap.
+     *
+     * Pool에 사용 가능한 비트맵이 없는 경우 null이 반환된다는 점을 제외하면 [get]과 동일하다.
+     */
     fun getOrNull(@Px width: Int, @Px height: Int, config: Bitmap.Config): Bitmap?
 
+    /**
+     * Identical to [get] except that any returned [Bitmap] may not have been erased and may contain random data.
+     *
+     * If no bitmap with the requested attributes is present in the pool, a new one will be allocated
+     *
+     * Although this method is slightly more efficient than [BitmapPool.get] it should be used with
+     * caution and only when the caller is sure that they are going to erase the [Bitmap] entirely
+     * before writing new data to it.
+     *
+     */
     fun getDirty(@Px width: Int, @Px height: Int, config: Bitmap.Config): Bitmap
 
+    /**
+     * Identical to [getDirty] except that null will be returned if the pool does not contain a usable bitmap.
+     */
     fun getDirtyOrNull(@Px width : Int, @Px height : Int, config: Bitmap.Config): Bitmap?
 
     fun trimMemory(level : Int)
 
+    /**
+     * Remove all [Bitmap]s from this pool and free their memory
+     */
     fun clear()
 }

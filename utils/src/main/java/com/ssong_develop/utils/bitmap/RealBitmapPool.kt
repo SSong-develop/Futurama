@@ -2,6 +2,9 @@ package com.ssong_develop.utils.bitmap
 
 import android.graphics.Bitmap
 
+/**
+ * A [BitmapPool] implementation that uses a [BitmapPoolStrategy] to bucket [Bitmap]s
+ */
 class RealBitmapPool: BitmapPool {
     override fun put(bitmap: Bitmap) {
         TODO("Not yet implemented")
