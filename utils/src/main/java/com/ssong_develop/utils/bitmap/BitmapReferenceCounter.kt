@@ -1,6 +1,7 @@
 package com.ssong_develop.utils.bitmap
 
 import android.graphics.Bitmap
+import com.ssong_develop.utils.memory.WeakMemoryCache
 import java.util.logging.Logger
 
 /**
@@ -30,5 +31,16 @@ internal class RealBitmapReferenceCounter(
     private val bitmapPool: BitmapPool,
     private val logger: Logger?
 ) : BitmapReferenceCounter {
+    override fun increment(bitmap: Bitmap) {
+        TODO("Not yet implemented")
+    }
+
+    override fun decrement(bitmap: Bitmap): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun setValid(bitmap: Bitmap, isValid: Boolean) {
+        TODO("Not yet implemented")
+    }
 
 }
